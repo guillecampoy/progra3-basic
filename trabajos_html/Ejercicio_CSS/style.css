@@ -1,0 +1,90 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+header, 
+footer {
+    text-align: center;
+    background: #403ccf;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+}
+
+/* Botón */
+
+.btn {
+    padding: 10px 20px;
+    border-color: cyan;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background: cyan;
+    color: black;
+}
+
+input{
+    padding: 8px;
+    margin-left: 10px;
+    border: 2px solid #ccc;
+    outline: none;
+}
+
+input:focus {
+    border-color: #403cff;
+    box-shadow: 0 0 5px rgb(64, 60, 207, 0.5);
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.lista li {
+    padding: 5px;
+    margin: 3px 0; 
+    background: #eee; 
+}
+
+.lista li:nth-child(odd) {
+    color: red;
+}
+
+.lista li:nth-child(even) {
+    color: green;
+}
+
+.contenedor {
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    width: 200px;
+}
+
+.caja-relativa {
+    position: relative;
+    background: #403ccf;
+    color: white;
+    padding: 20px;
+}
+
+.caja-absoluta {
+    position: absolute;
+    background: #ff3333;
+    color: white;
+    top: 5px;
+    right: 5px;
+    padding: 3px 6px;
+    font-size: 12px;
+}

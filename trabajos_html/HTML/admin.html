@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel de administración</title>
+    </head>
+    <body>
+        <header>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="../assets/admin.png" alt="Logo de Food Store" width="60">
+                <h1 style="margin: 0;">Panel de Administración</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Volver a la Tienda</a></li>
+                    <li><a href="#">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <h2>Gestión de productos</h2>
+        <button type="button">+ Nuevo producto</button><br><br>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr bgcolor="#dddddd">
+                    <th>Id</th>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="assets/chori_bodegon.png" alt="imágen de choripán" width="80"></td>
+                    <td>Choripán</td>
+                    <td>Parrilla</td>
+                    <td>$13000,00</td>
+                    <td>49</td>
+                    <td><a href="#">Editar</a> |  <a href="#">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="assets/churrasquito_completo_bodegon.png" alt="imágen de churrasquito completo" width="80"></td>
+                    <td>Churrasquito Completo</td>
+                    <td>Minutas</td>
+                    <td>$20000,00</td>
+                    <td>80</td>
+                    <td><a href="#">Editar</a> |  <a href="#">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="assets/empanada_bodegon.png" alt="imágen de empagada de carne" width="80"></td>
+                    <td>Empanada</td>
+                    <td>Entradas</td>
+                    <td>$8000,00</td>
+                    <td>120</td>
+                    <td><a href="#">Editar</a> |  <a href="#">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img src="assets/mila_napo_bodegon.png" alt="imágen de milanesa de ternera napolitana" width="80"></td>
+                    <td>Milanesa napolitana</td>
+                    <td>Milanesas</td>
+                    <td>$18000,00</td>
+                    <td>15</td>
+                    <td><a href="#">Editar</a> |  <a href="#">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><img src="assets/papas_bodegon.png" alt="imágen de papas fritas" width="80"></td>
+                    <td>Papas Fritas</td>
+                    <td>Entradas</td>
+                    <td>$9500,00</td>
+                    <td>78</td>
+                    <td><a href="#">Editar</a> |  <a href="#">Eliminar</a></td>
+                </tr>
+            </tbody> 
+        </table>
+        <br><hr>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/editar.png" alt="icono de edición" width="30">
+            <h4 style="margin: 0;">Agregar producto rápido</h4>
+        </div>
+        <br>
+        <form>
+            <label for="nombre">Nombre del producto:</label><br>
+            <input type="text" id="nombre" name="nombre"
+            placeholder="Ej. Lomito Completo" required 
+            minlength="3" maxlength="30"
+            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"
+            title="Sólo letras, mínimo tres caracteres"><br><br>
+            <label for="precio">Precio:</label><br>
+            <input type="number" id="precio" name="precio"
+            required min="0"
+            title="Debe ingresar un importe válido"><br><br>
+            <label for="stock">Stock Inicial:</label><br>
+            <input type="number" id="stock" name="stock"
+            required min="0"
+            title="Debe ingresar un importe válido"><br><br>
+            <label for="categoria">Categoria</label><br>
+            <select id="categoria" name="categoria" required>
+                <option value="" disabled selected>Seleccione una categoría...</option>
+                <option value="1">Parrilla</option>
+                <option value="2">Entradas</option>
+                <option value="3">Otra</option>
+            </select><br><br>
+            <label for="descripcion">Descripción:</label><br>
+                <textarea style="resize: none;" id="descripcion" name="descripcion" rows="4" cols="40" required
+                placeholder="Ingresa los ingredientes..."></textarea><br><br>
+            <button type="submit">Guardar Producto</button>
+        </form>
+        <footer>
+            <p><small>Panel de Administración - Food Store v1.0</small></p>    
+        </footer>
+    </body>
+</html>

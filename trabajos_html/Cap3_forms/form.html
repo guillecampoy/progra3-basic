@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="TFT-8">
+        <meta name="viewport" content="width=device-widht", initial-scale="1.0">
+        <title> Medios y Enlaces</title>
+    </head>
+    
+    <body>
+        <form id="formulario">
+            <!--DATOS PERSONALES-->
+            <fieldset>
+                <legend>Datos personales</legend>
+                
+                <label for="nombre">Nombre completo:</label><br>
+                <input type="text" id="nombre" name="nombre"
+                placeholder="Ej. Jorge López" required 
+                minlength="3" maxlength="30"
+                title="Sólo letras, mínimo tres caracteres"><br><br>
+                <label for="correo">Correo electrónico</label><br>
+                <input type="email" id="correo" name="correo"
+                placeholder="Ej. jhon_doe@dominio.com" required
+                minlength="7" maxlength="50"
+                title="Debe ingresar un correo válido"><br><br>
+                <label for="telefono">Teléfono: </label><br>
+                <input type="tel" id="telefono" name="telefono"
+                placeholder="Ej. 54 11 9 6576999" required
+                pattern="\d{10,12}"
+                title="Debe proporcionar un teléfono válido"><br><br>
+
+            </fieldset>
+
+            <!--Mensaje-->
+            <fieldset>
+                <legend>Sujerencias</legend>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea style="resize: none;" id="mensaje" name="mensaje" rows="4" cols="40" required
+                placeholder="Escriba un mensaje"></textarea>
+            </fieldset>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>
